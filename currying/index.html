@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>What is Currying ?</h4>
+    <!-- <p>Delaying the timing of function to call ... or function kb call hoye </p> -->
+    <h3>
+        Why do we use currying ?
+    </h3>
+    <p>A function returning funtion </p>
+    <p>We can also do a deep curring - function returning func returning func </p>
+
+    <p>Why do we use currying ?</p>
+    <ol>
+        <li>To avoid passing the same variable again and again</li>
+        <li>To create higher order functions</li>
+        <li>To make your func pure and less prone to errors</li>
+    </ol>
+
+    <p id="heading">update me </p>
+    <button onclick="callCurry()"> Call curry</button>
+    
+    
+    <button onclick="sumUsingCurring(2)(5)(8)"> Sum using curring</button>
+</body>
+<script src="./index.js"></script>
+</html>

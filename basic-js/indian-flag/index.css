@@ -1,0 +1,145 @@
+body {
+  background-color: antiquewhite;
+}
+
+.title {
+  text-align: center;
+  background: linear-gradient(orange, white, green);
+  color: darkblue;
+  margin: 1rem 1rem 3rem 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.container {
+  display: flex;
+  gap: 10rem;
+}
+
+.left-container {
+  display: flex;
+}
+
+.stick {
+  height: 30rem;
+  border: 8px solid brown;
+  border-radius: 5px 5px 0 0;
+  margin-top: -1rem;
+  margin-left: 2rem;
+}
+
+.flag {
+  width: 30rem;
+  height: 15rem;
+  border: 1px solid brown;
+}
+
+.first-layer,
+.second-layer,
+.third-layer {
+  height: 5rem;
+  width: 30rem;
+}
+
+.first-layer {
+  background-color: orange;
+}
+
+.second-layer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.third-layer {
+  background-color: green;
+}
+
+.chakra {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid darkblue;
+  border-radius: 50%;
+  position: relative;
+}
+.line {
+  position: absolute;
+  left: 50%;
+  border-left: 0.8px solid darkblue;
+  height: 5rem;
+}
+.line:nth-child(1) {
+  rotate: 15deg;
+}
+.line:nth-child(2) {
+  rotate: 30deg;
+}
+.line:nth-child(3) {
+  rotate: 45deg;
+}
+.line:nth-child(4) {
+  rotate: 60deg;
+}
+.line:nth-child(5) {
+  rotate: 75deg;
+}
+.line:nth-child(6) {
+  rotate: 90deg;
+}
+.line:nth-child(7) {
+  rotate: 105deg;
+}
+.line:nth-child(8) {
+  rotate: 120deg;
+}
+.line:nth-child(9) {
+  rotate: 135deg;
+}
+.line:nth-child(10) {
+  rotate: 150deg;
+}
+.line:nth-child(11) {
+  rotate: 165deg;
+}
+
+.right-container {
+  font-family: fantasy;
+  font-size: 20px;
+}
+.first-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.date {
+  color: green;
+}
+.month {
+  color: white;
+  background: orange;
+  padding: 4px;
+  letter-spacing: 2px;
+}
+.festival {
+  color: gray;
+  letter-spacing: 2px;
+}
+
+.hero {
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12px;
+  color: lightcoral;
+  text-align: right;
+}
+
+.speech {
+  font-family: cursive;
+  font-size: 16px;
+}
+.speech-end {
+  text-align: end;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>When we load a webpage - 2 major things happen</p>
+    <ol>
+      <li>HTML parsing to show he content on web</li>
+      <li>Loading of scripts</li>
+      <ol type="a">
+        <li>Fetching the script from the network</li>
+        <li>Excuting script line by line</li>
+      </ol>
+    </ol>
+
+    <p>
+      We going to discuss how they behave in async, defer and normal script tag
+    </p>
+
+    <img src="./difference.png" alt="" height="300" />
+    <ul>
+      <li>Black = HTML parsing</li>
+      <li>Green = Fetching script from browser</li>
+      <li>red = Executing script line by line</li>
+    </ul>
+
+    <h4>1) Normal Script tag</h4>
+    <p>html parsing blocks when script is fetching / script is executing</p>
+    <h4>2) async attribue in Script tag</h4>
+    <p>
+      html parsing blocks when script is executing only !! script is fetching
+      asynchronously /
+    </p>
+    <h4>3) defer attribue in Script tag</h4>
+    <p>
+      html parsing never blocks , it cotinues to load !! script is fetching
+      asynchronously and execution of scripts is done after HTML rendered
+    </p>
+
+    <h4>Note:</h4>
+    <p>async attribue doesn't gurantee the order of execution of scripts but</p>
+    <p>differ gurantee the order of execution</p>
+
+    <h5>When to use a defer</h5>
+    <p>
+      e.g let 2nd script tag is dependent on 1st so using async will be the bad
+      decision here, use defer instead
+    </p>
+    <p>1st script src="" async</p>
+    <p>2nd script src="" async</p>
+
+    <h5>When to use a async</h5>
+    <p>
+      e.g let a third party libraby like google analytics. It is quite modular ,
+      and independent of our normal code
+    </p>
+    <p>1st script src="" async</p>
+    <p>2nd script src="" async</p>
+  </body>
+</html>
