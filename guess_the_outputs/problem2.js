@@ -1,4 +1,4 @@
-//Use quokka js get inline outputs
+//Use quokka js get inline outputs - Inheritation examples
 
 //Variation 1
 var Student = {
