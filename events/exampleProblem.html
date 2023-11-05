@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        min-width: 100px;
+        min-height: 100px;
+        padding: 20px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>PROBLEM</h2>
+    <h4>
+      Which event is triggered on click of Sixth and the sequence of event
+      propogation ?
+    </h4>
+    <p>
+      Note: Always Capturing runs first than bubbling (TOP to BOTTOM , than
+      BOTTOM to TOP)
+    </p>
+    <div id="first">
+      First - Bubbling
+      <div id="second">
+        Second - Bubbling
+        <div id="third">
+          Third - Capturing
+          <div id="fourth">
+            Fourth - Capturing
+            <div id="fifth">
+              Fifth - Bubbling
+              <div id="sixth">Sixth - Bubbling</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const first = document.querySelector("#first");
+      const second = document.querySelector("#second");
+      const third = document.querySelector("#third");
+      const fourth = document.querySelector("#fourth");
+      const fifth = document.querySelector("#fifth");
+      const sixth = document.querySelector("#sixth");
+
+      // true  - Event Capturing
+      // false  - Event Bubbing
+      first.addEventListener(
+        "click",
+        () => {
+          console.log("First Clicked ");
+        },
+        false
+      );
+      second.addEventListener(
+        "click",
+        () => {
+          console.log("Second Clicked ");
+        },
+        false
+      );
+      third.addEventListener(
+        "click",
+        () => {
+          console.log("Third Clicked ");
+        },
+        true
+      );
+      fourth.addEventListener(
+        "click",
+        () => {
+          console.log("Fourth Clicked ");
+        },
+        true
+      );
+      fifth.addEventListener(
+        "click",
+        () => {
+          console.log("Fifth Clicked ");
+        },
+        false
+      );
+      sixth.addEventListener(
+        "click",
+        () => {
+          console.log("Sixth Clicked ");
+        },
+        false
+      );
+
+      //3,4,6,5,2,1
+    </script>
+  </body>
+</html>
