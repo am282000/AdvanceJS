@@ -1,0 +1,45 @@
+<!-- 
+ * Take array,index as input from user 
+   then print value at that index on alert
+  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input
+        id="inputArray"
+        type="text"
+        placeholder="Enter Array (Comma seprated)"
+      />
+      <input
+        id="inputIndex"
+        type="number"
+        placeholder="Enter Index you want to print"
+      />
+    </div>
+    <script>
+      const inputArray = document.getElementById("inputArray");
+      let finalArray = [];
+      inputArray.addEventListener("focusout", (event) => {
+        const array = event.target.value;
+        console.log(`Array: [${array}]`);
+        finalArray = array.split(",");
+        console.log("finalArray: ", finalArray);
+      });
+      const inputIndex = document.getElementById("inputIndex");
+      inputIndex.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+          const index = event.target.value;
+          const message = `Value at ${index} index is ${finalArray[index]}`;
+          alert(message);
+          event.target.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

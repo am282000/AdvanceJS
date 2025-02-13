@@ -39,24 +39,24 @@
 
 //  approoach 3      TC => O(nlogn) SC (1)
 
-let majorityElement = function (nums) {
-  const halfLength = Math.ceil(nums.length / 2);
-  nums.sort((a, b) => a - b);
-  return nums[halfLength];
-};
+// let majorityElement = function (nums) {
+//   const halfLength = Math.ceil(nums.length / 2);
+//   nums.sort((a, b) => a - b);
+//   return nums[halfLength];
+// };
 
-console.log(majorityElement([0, 3, 2, 2, 1, 3, 3, 3, 0, 3, 3]));
+// console.log(majorityElement([0, 3, 2, 2, 1, 3, 3, 3, 0, 3, 3]));
 
 //approach 4   TC => O(n)  SC(1)
 
-// let majorityElement = function (nums) {
-//   let curMaxElement = nums[0];
-//   let count = 0;
-//   for (let i = 0; i < nums.length; i++) {
-//     if (count === 0) curMaxElement = nums[i];
-//     count += (curMaxElement === nums[i]) ? 1 : -1;
-//   }
-//   return curMaxElement;
-// };
+let majorityElement = function (nums) {
+  let curMaxElement = nums[0];
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (count === 0) curMaxElement = nums[i];
+    count += (curMaxElement === nums[i]) ? 1 : -1;
+  }
+  return curMaxElement;
+};
 
-// console.log(majorityElement([0,3,2,2,1,3,3,3,0,3,3]));
+console.log(majorityElement([0,3,2,2,1,3,3,3,0,3,3]));

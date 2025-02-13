@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Event Delegation</h2>
+    <img src="./problem.png" alt="" />
+    <p>
+      Let's say every category will take me to the specific link e.g.
+      /category/laptop
+    </p>
+    <p>
+      Basic Issue with this code : We need to attach event listner to all the
+      categatories specifically
+    </p>
+    <h4>What is Event Delegation</h4>
+    <p>
+      Instead of declaring event for all the child HTML element, add a event on
+      the parent of these HTML element
+    </p>
+    <p>Evwnt Delgation is based on the concept of Event Bubbling</p>
+    <p>
+      Instead of calling event on every child , we will pass the info 1 level up
+      to parent
+    </p>
+
+    <section>
+      <h4>Real lie example of event delegation</h4>
+      <p>
+        Problem : I want to redirect user to /laptops, /shoes on click of a
+        specific category
+      </p>
+      <div>
+        <ul id="categories">
+          <li id="laptops">laptops</li>
+          <li id="shoes">shoes</li>
+          <li id="cameras">cameras</li>
+        </ul>
+      </div>
+    </section>
+    <script src="./eventDelegation.js"></script>
+  </body>
+</html>

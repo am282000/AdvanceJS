@@ -47,7 +47,7 @@ let nameWithLocation = function (hometown, state) {
 };
 
 //1st arg is whose this is the reference here, rest are func args
-nameWithLocation.call(name3, "Noida", "UP");
+nameWithLocation.call(name3, "Noida", "UP1");
 
 //If I don't pass any argument of function than it will print undefined
 // To avoid undefined we can give default value to state = "UP" in parameters
